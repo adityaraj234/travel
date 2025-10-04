@@ -1,0 +1,105 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: rgb(230, 240, 255);
+}
+
+header {
+    background-color: rgb(0, 70, 140);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    background-color: rgb(30, 90, 180);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgb(180, 220, 255);
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h2 {
+    color: rgb(0, 70, 140);
+    margin: 15px;
+}
+
+.card p {
+    margin: 0 15px 15px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(0, 70, 140);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Media queries */
+@media (max-width: 960px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
